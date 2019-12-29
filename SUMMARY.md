@@ -15,6 +15,8 @@
 
 * [统计方法](./stat/index.md)
 
+    * [回归分析](./stat/regression.md)
+
 * [工程化](./stat/index.md)
 
     * [数据库连接](./project/database.md)
