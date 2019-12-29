@@ -9,3 +9,5 @@
     * [R](./data_process/R.md)
 
 * [统计方法](./stat/index.md)
+
+* [gitbook启动方法](./gitbook_server/index.md)
