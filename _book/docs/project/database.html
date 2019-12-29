@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数据处理 · GitBook</title>
+        <title>数据库连接 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="skills/tips.html" />
+    <link rel="next" href="../gitbook_server/" />
     
     
-    <link rel="prev" href="../linux/command.html" />
+    <link rel="prev" href="../stat/" />
     
 
     </head>
@@ -138,9 +138,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../data_process/">
             
-                <a href="./">
+                <a href="../data_process/">
             
                     
                     数据处理
@@ -152,9 +152,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="skills/tips.html">
+        <li class="chapter " data-level="1.3.1" data-path="../data_process/skills/tips.html">
             
-                <a href="skills/tips.html">
+                <a href="../data_process/skills/tips.html">
             
                     
                     常用技巧
@@ -165,7 +165,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="skearn.md">
+        <li class="chapter " data-level="1.3.2" data-path="../data_process/skearn.md">
             
                 <span>
             
@@ -178,7 +178,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="R.md">
+        <li class="chapter " data-level="1.3.3" data-path="../data_process/R.md">
             
                 <span>
             
@@ -223,9 +223,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../project/database.html">
+        <li class="chapter active" data-level="1.5.1" data-path="database.html">
             
-                <a href="../project/database.html">
+                <a href="database.html">
             
                     
                     数据库连接
@@ -291,7 +291,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >数据处理</a>
+        <a href=".." >数据库连接</a>
     </h1>
 </div>
 
@@ -306,8 +306,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x57FA;&#x4E8E;sklearn&#x7684;&#x6807;&#x51C6;&#x505A;&#x6CD5;&#x3002;
-&#x800C;&#x4E0D;&#x662F;&#x86CB;&#x75BC;&#x7684;&#x4E00;&#x70B9;&#x70B9;&#x5904;&#x7406;</p>
+                                <p>pandas&#x5B58;mysql</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+<span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> create_engine
+
+conn = create_engine(<span class="hljs-string">&apos;mysql+mysqldb://rudi:password@localhost:3306/test?charset=utf8&apos;</span>)
+
+data = pd.read_csv(<span class="hljs-string">&quot;debug_case.csv&quot;</span>, sep=<span class="hljs-string">&quot;\t&quot;</span>)
+data.fillna(<span class="hljs-string">&quot;None&quot;</span>, inplace=<span class="hljs-keyword">True</span>)
+data = data.drop([<span class="hljs-string">&apos;Unnamed: 0&apos;</span>, <span class="hljs-string">&apos;Unnamed: 0.1&apos;</span>, <span class="hljs-string">&quot;index&quot;</span>], axis=<span class="hljs-number">1</span>)
+data[<span class="hljs-string">&quot;comment&quot;</span>] = <span class="hljs-string">&quot;&quot;</span>
+
+print(data.dtypes)
+data.to_sql(<span class="hljs-string">&quot;table&quot;</span>, con=conn, if_exists=<span class="hljs-string">&quot;append&quot;</span>, index=<span class="hljs-keyword">False</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -335,12 +348,12 @@
 
             
                 
-                <a href="../linux/command.html" class="navigation navigation-prev " aria-label="Previous page: 常用命令">
+                <a href="../stat/" class="navigation navigation-prev " aria-label="Previous page: 工程化">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="skills/tips.html" class="navigation navigation-next " aria-label="Next page: 常用技巧">
+                <a href="../gitbook_server/" class="navigation navigation-next " aria-label="Next page: Gitbook启动方法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -351,7 +364,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据处理","level":"1.3","depth":1,"next":{"title":"常用技巧","level":"1.3.1","depth":2,"path":"data_process/skills/tips.md","ref":"data_process/skills/tips.md","articles":[]},"previous":{"title":"常用命令","level":"1.2.1","depth":2,"path":"linux/command.md","ref":"./linux/command.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"data_process/index.md","mtime":"2019-12-29T16:13:16.022Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-29T16:41:52.528Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据库连接","level":"1.5.1","depth":2,"next":{"title":"Gitbook启动方法","level":"2.1","depth":1,"path":"gitbook_server/index.md","ref":"./gitbook_server/index.md","articles":[]},"previous":{"title":"工程化","level":"1.5","depth":1,"path":"stat/index.md","ref":"./stat/index.md","articles":[{"title":"数据库连接","level":"1.5.1","depth":2,"path":"project/database.md","ref":"./project/database.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"project/database.md","mtime":"2019-12-29T17:49:07.851Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-29T16:41:52.528Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
