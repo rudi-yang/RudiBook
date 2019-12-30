@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Gitbook启动方法 · GitBook</title>
+        <title>数据库连接 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../gitbook_server/" />
     
-    <link rel="prev" href="../project/database.html" />
+    
+    <link rel="prev" href="../stat/" />
     
 
     </head>
@@ -253,9 +255,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../project/database.html">
+        <li class="chapter active" data-level="1.5.1" data-path="database.html">
             
-                <a href="../project/database.html">
+                <a href="database.html">
             
                     
                     数据库连接
@@ -278,9 +280,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="./">
+        <li class="chapter " data-level="2.1" data-path="../gitbook_server/">
             
-                <a href="./">
+                <a href="../gitbook_server/">
             
                     
                     Gitbook启动方法
@@ -321,7 +323,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Gitbook启动方法</a>
+        <a href=".." >数据库连接</a>
     </h1>
 </div>
 
@@ -336,13 +338,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;">&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
-<ul>
-<li>gitbook install</li>
-<li>gitbook build</li>
-<li>gitbook server</li>
-</ul>
-<p>&#x7531;&#x4E8E;github&#x9650;&#x5236;&#xFF0C;&#x5C06;&#x751F;&#x6210;&#x7684;_book&#x590D;&#x5236;&#x5230;docs&#x6587;&#x4EF6;&#x5939;&#x7528;&#x4E8E;&#x9875;&#x9762;&#x8F93;&#x51FA;</p>
+                                <p>pandas&#x5B58;mysql</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+<span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> create_engine
+
+conn = create_engine(<span class="hljs-string">&apos;mysql+mysqldb://rudi:password@localhost:3306/test?charset=utf8&apos;</span>)
+
+data = pd.read_csv(<span class="hljs-string">&quot;debug_case.csv&quot;</span>, sep=<span class="hljs-string">&quot;\t&quot;</span>)
+data.fillna(<span class="hljs-string">&quot;None&quot;</span>, inplace=<span class="hljs-keyword">True</span>)
+data = data.drop([<span class="hljs-string">&apos;Unnamed: 0&apos;</span>, <span class="hljs-string">&apos;Unnamed: 0.1&apos;</span>, <span class="hljs-string">&quot;index&quot;</span>], axis=<span class="hljs-number">1</span>)
+data[<span class="hljs-string">&quot;comment&quot;</span>] = <span class="hljs-string">&quot;&quot;</span>
+
+print(data.dtypes)
+data.to_sql(<span class="hljs-string">&quot;table&quot;</span>, con=conn, if_exists=<span class="hljs-string">&quot;append&quot;</span>, index=<span class="hljs-keyword">False</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -370,10 +380,14 @@
 
             
                 
-                <a href="../project/database.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数据库连接">
+                <a href="../stat/" class="navigation navigation-prev " aria-label="Previous page: 工程化">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../gitbook_server/" class="navigation navigation-next " aria-label="Next page: Gitbook启动方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -382,7 +396,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitbook启动方法","level":"2.1","depth":1,"previous":{"title":"数据库连接","level":"1.5.1","depth":2,"path":"project/database.md","ref":"./project/database.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold"],"pluginsConfig":{"chapter-fold":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook_server/index.md","mtime":"2019-12-29T16:46:51.260Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T17:27:39.058Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据库连接","level":"1.5.1","depth":2,"next":{"title":"Gitbook启动方法","level":"2.1","depth":1,"path":"gitbook_server/index.md","ref":"./gitbook_server/index.md","articles":[]},"previous":{"title":"工程化","level":"1.5","depth":1,"path":"stat/index.md","ref":"./stat/index.md","articles":[{"title":"数据库连接","level":"1.5.1","depth":2,"path":"project/database.md","ref":"./project/database.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold"],"pluginsConfig":{"chapter-fold":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"project/database.md","mtime":"2019-12-29T17:49:07.851Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T17:30:58.867Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

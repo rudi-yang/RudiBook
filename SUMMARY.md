@@ -17,6 +17,7 @@
 
     * [回归分析](./stat/regression.md)
     * [HMM](./stat/hmm.md)
+    * [概率图](./stat/probablistic_model.md)
 
 * [工程化](./stat/index.md)
 

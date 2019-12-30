@@ -120,6 +120,8 @@ import matplotlib.pyplot as plt
 
 # 显示中文标签
 plt.rcParams['font.sans-serif'] = ['SimHei']  
+plt.rcParams["font.family"] = 'Arial Unicode MS'
+
 
 # 回归线
 plt.scatter(data["complain"], data["prediction_prob"])
