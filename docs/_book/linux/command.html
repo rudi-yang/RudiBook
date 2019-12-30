@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>回归分析 · GitBook</title>
+        <title>常用命令 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="./" />
+    <link rel="next" href="../data_process/" />
     
     
     <link rel="prev" href="./" />
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../linux/">
+        <li class="chapter " data-level="1.2" data-path="./">
             
-                <a href="../linux/">
+                <a href="./">
             
                     
                     Linux
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../linux/command.html">
+        <li class="chapter active" data-level="1.2.1" data-path="command.html">
             
-                <a href="../linux/command.html">
+                <a href="command.html">
             
                     
                     常用命令
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../stat/">
             
-                <a href="./">
+                <a href="../stat/">
             
                     
                     统计方法
@@ -210,12 +210,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="regression.html">
+        <li class="chapter " data-level="1.4.1" data-path="../stat/regression.html">
             
-                <a href="regression.html">
+                <a href="../stat/regression.html">
             
                     
                     回归分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../stat/hmm.html">
+            
+                <a href="../stat/hmm.html">
+            
+                    
+                    HMM
             
                 </a>
             
@@ -228,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../stat/">
             
-                <a href="./">
+                <a href="../stat/">
             
                     
                     工程化
@@ -310,7 +323,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >回归分析</a>
+        <a href=".." >常用命令</a>
     </h1>
 </div>
 
@@ -325,38 +338,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x5BF9;&#x4E8E;&#x56DE;&#x5F52;&#x6A21;&#x578B;</p>
-<ol>
-<li>&#x4F18;&#x9009;&#x89C2;&#x5BDF;F&#x7EDF;&#x8BA1;&#x91CF;&#x7684;p&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;p&#x503C;&#x662F;&#x5BF9;&#x6574;&#x4E2A;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x5BF9;&#x5047;&#x8BBE;&#x68C0;&#x9A8C;&#x3002;
-&#x5047;&#x8BBE;&#x5404;&#x4E2A;&#x7CFB;&#x6570;&#x4E3A;0&#x3002;&#x5982;&#x679C;p&#x503C;&#x8F83;&#x5927;&#xFF0C;&#x65E0;&#x6CD5;&#x62D2;&#x7EDD;&#x539F;&#x5047;&#x8BBE;&#xFF0C;&#x65E0;&#x6CD5;&#x8BC1;&#x660E;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x53D8;&#x91CF;&#x5BF9;&#x56E0;&#x53D8;&#x91CF;&#x6709;&#x663E;&#x8457;&#x6027;&#x5F71;&#x54CD;&#x3002;</li>
-<li>&#x89C2;&#x5BDF;&#x8C03;&#x548C;R2&#xFF0C;&#x8D8A;&#x5927;&#x8BF4;&#x660E;&#x6A21;&#x578B;&#x81EA;&#x53D8;&#x91CF;&#x5BF9;&#x56E0;&#x53D8;&#x91CF;&#x53EF;&#x89E3;&#x91CA;&#x7684;&#x90E8;&#x5206;&#x8D8A;&#x5927;&#xFF0C;&#x6A21;&#x578B;&#x9884;&#x6D4B;&#x6027;&#x8D8A;&#x597D;&#x3002;</li>
-</ol>
-<p>&#x56DE;&#x5F52;&#x8BCA;&#x65AD;&#xFF1A;</p>
-<ol>
-<li>&#x81EA;&#x53D8;&#x91CF;&#x548C;&#x56E0;&#x53D8;&#x91CF;&#x5B58;&#x5728;&#x7EBF;&#x6027;&#x5173;&#x7CFB;</li>
-<li>&#x6B8B;&#x5DEE;&#x57FA;&#x672C;&#x670D;&#x4ECE;&#x6B63;&#x6001;&#x5206;&#x5E03;--QQ&#x56FE;</li>
-<li>&#x6B8B;&#x5DEE;&#x65B9;&#x5DEE;&#x6EE1;&#x8DB3;&#x540C;&#x65B9;&#x5DEE;&#x6027;&#xFF0C;&#x57FA;&#x672C;&#x4E0D;&#x53D8;&#x3002;<ol>
-<li>Scale-Location&#xFF0C;&#x7EB5;&#x5750;&#x6807;&#x4E3A;&#x6807;&#x51C6;&#x5316;&#x6B8B;&#x5DEE;&#x7684;&#x5E73;&#x65B9;&#x6839;&#xFF0C;&#x6B8B;&#x5DEE;&#x8D8A;&#x5927;&#xFF0C;&#x70B9;&#x4F4D;&#x7F6E;&#x8D8A;&#x9AD8;&#x3002;&#x5206;&#x5E03;&#x8D8A;&#x968F;&#x673A;&#x8D8A;&#x597D;</li>
-</ol>
-</li>
-<li>&#x6B8B;&#x5DEE;&#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x3002;<ol>
-<li>Residual-Leverage&#x3002;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x70B9;&#x5BF9;&#x56DE;&#x5F52;&#x7EBF;&#x7684;&#x5F71;&#x54CD;&#x529B;&#xFF0C;&#x901A;&#x8FC7;&#x6539;&#x56FE;&#x53EF;&#x4EE5;&#x5254;&#x9664;&#x5F02;&#x5E38;&#x503C;&#x7684;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x6539;&#x5584;&#x56DE;&#x5F52;&#x6548;&#x679C;&#x3002;</li>
-<li>&#x5F02;&#x5E38;&#x503C;&#x5206;&#x7C7B;&#xFF1A;&#x79BB;&#x7FA4;&#x70B9;&#xFF0C;&#x6760;&#x6746;&#x70B9;&#xFF0C;&#x5F3A;&#x5F71;&#x54CD;&#x70B9;</li>
-</ol>
-</li>
-</ol>
-<p>&#x79BB;&#x5DEE;&#x5E73;&#x65B9;&#x548C;&#x7684;&#x5206;&#x89E3;: </p>
-<ol>
-<li>SST &#x603B;&#x5E73;&#x65B9;&#x548C;</li>
-<li>SSR &#x56DE;&#x5F52;&#x5E73;&#x65B9;&#x548C;-&#x5747;&#x503C;&#x5230;&#x9884;&#x6D4B;&#x503C;-&#x53EF;&#x89E3;&#x91CA;&#x7684;&#x5E73;&#x65B9;&#x548C;</li>
-<li>SSE &#x6B8B;&#x5DEE;&#x5E73;&#x65B9;&#x548C;-&#x9884;&#x6D4B;&#x503C;&#x5230;&#x771F;&#x503C;-&#x4E0D;&#x53EF;&#x89E3;&#x91CA;&#x7684;&#x5E73;&#x65B9;&#x548C;</li>
-</ol>
-<p>SST = SSR+SSE<br>R2 = SSR/SST</p>
-<p>&#x6A21;&#x578B;F&#x68C0;&#x9A8C;&#xFF1A;&#x6BD4;&#x8F83;MSR&#x540C;MSE</p>
-<p>&#x53C2;&#x8003;&#xFF1A;</p>
-<blockquote>
-<p><a href="https://www.bilibili.com/video/av51815891?from=search&amp;seid=9979237500261451613" target="_blank">https://www.bilibili.com/video/av51815891?from=search&amp;seid=9979237500261451613</a></p>
-</blockquote>
+                                <h1 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;">&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
+<p><a href="https://blog.csdn.net/zhangliao613/article/details/79021606" target="_blank">https://blog.csdn.net/zhangliao613/article/details/79021606</a></p>
+<p>&#x67E5;&#x770B;CPU&#x4E2A;&#x6570;:
+ cat /proc/cpuinfo | grep &quot;physical id&quot; | uniq | wc -l</p>
+<p>&#x67E5;&#x770B;CPU&#x6838;&#x6570;:
+ cat /proc/cpuinfo | grep &quot;cpu cores&quot; | uniq</p>
+<p>&#x67E5;&#x770B;CPU&#x578B;&#x53F7;:
+ cat /proc/cpuinfo | grep &apos;model name&apos; |uniq</p>
+<p>&#x67E5;&#x770B;&#x5185;&#x5B58;&#x603B;&#x6570;:
+    cat /proc/meminfo | grep MemTotal</p>
+<pre><code>MemTotal: 32941268 kB //&#x5185;&#x5B58;32G
+</code></pre><p>&#x67E5;&#x770B;&#x786C;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;:
+df  -k i-h</p>
 
                                 
                                 </section>
@@ -384,12 +378,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 统计方法">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Linux">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="./" class="navigation navigation-next " aria-label="Next page: 工程化">
+                <a href="../data_process/" class="navigation navigation-next " aria-label="Next page: 数据处理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -400,7 +394,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"回归分析","level":"1.4.1","depth":2,"next":{"title":"工程化","level":"1.5","depth":1,"path":"stat/index.md","ref":"./stat/index.md","articles":[{"title":"数据库连接","level":"1.5.1","depth":2,"path":"project/database.md","ref":"./project/database.md","articles":[]}]},"previous":{"title":"统计方法","level":"1.4","depth":1,"path":"stat/index.md","ref":"./stat/index.md","articles":[{"title":"回归分析","level":"1.4.1","depth":2,"path":"stat/regression.md","ref":"./stat/regression.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stat/regression.md","mtime":"2019-12-29T18:54:21.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-29T16:41:52.528Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用命令","level":"1.2.1","depth":2,"next":{"title":"数据处理","level":"1.3","depth":1,"path":"data_process/index.md","ref":"./data_process/index.md","articles":[{"title":"常用技巧","level":"1.3.1","depth":2,"path":"data_process/skills/tips.md","ref":"data_process/skills/tips.md","articles":[]},{"title":"sklearn","level":"1.3.2","depth":2,"path":"data_process/skearn.md","ref":"./data_process/skearn.md","articles":[]},{"title":"R","level":"1.3.3","depth":2,"path":"data_process/R.md","ref":"./data_process/R.md","articles":[]}]},"previous":{"title":"Linux","level":"1.2","depth":1,"path":"linux/index.md","ref":"./linux/index.md","articles":[{"title":"常用命令","level":"1.2.1","depth":2,"path":"linux/command.md","ref":"./linux/command.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold"],"pluginsConfig":{"chapter-fold":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"linux/command.md","mtime":"2019-12-29T17:44:39.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T17:27:39.058Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -411,10 +405,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

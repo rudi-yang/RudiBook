@@ -16,6 +16,7 @@
 * [统计方法](./stat/index.md)
 
     * [回归分析](./stat/regression.md)
+    * [HMM](./stat/hmm.md)
 
 * [工程化](./stat/index.md)
 
