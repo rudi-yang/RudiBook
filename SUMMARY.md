@@ -9,7 +9,11 @@
 
     * [常用技巧](data_process/skills/tips.md)
 
-    * [sklearn](./data_process/skearn.md)
+    * [sklearn](./data_process/index.md)
+        
+        * [pipeline数据处理](./data_process/pipeline.md)
+        * [特征筛选](./data_process/feature_selection.md)
+        * [模型筛选](./data_process/model_selection.md)
 
     * [R](./data_process/R.md)
 
