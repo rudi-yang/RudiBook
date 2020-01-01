@@ -15,6 +15,7 @@
 
 * [统计方法](./stat/index.md)
 
+    * [熵](./stat/entropy.md)
     * [回归分析](./stat/regression.md)
     * [HMM](./stat/hmm.md)
     * [概率图](./stat/probablistic_model.md)
