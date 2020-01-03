@@ -4,7 +4,7 @@
 > $$H(x) = -\sum_{x\in R}p(x)*logp(x)$$   
 > 约定： $$0*log0=0$$   
 
-![熵](img/entropy.png)
+![熵](../img/entropy.png)
 ## 联合熵和条件熵
 联合熵：
 $$H(X,Y) = -\sum_{x \in X}\sum_{y \in Y}p(x,y)*log(x,y)$$

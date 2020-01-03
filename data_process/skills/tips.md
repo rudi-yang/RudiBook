@@ -43,7 +43,10 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.width', 5000)
 
 # 读入中文文件
-data = pd.read_csv("全足迹覆盖.csv", encoding='gbk')
+data = pd.read_csv("data.csv", encoding='gbk')
+
+# 去除Unname:0
+data = pd.read_csv("data.csv", index_col=0)
 
 # 显示数据精度设置
 np.set_printoptions(suppress=True)

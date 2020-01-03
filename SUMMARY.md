@@ -17,9 +17,13 @@
 
     * [R](./data_process/R.md)
 
-* [统计方法](./stat/index.md)
+* [算法理论](./stat/index.md)
 
-    * [熵](./stat/entropy.md)
+    * [数学基础](./stat/math/index.md)
+    
+        * [信息论-熵](./stat/math/entropy.md)
+        * [矩阵](./stat/math/matrix.md)
+        
     * [回归分析](./stat/regression.md)
     * [HMM](./stat/hmm.md)
     * [概率图](./stat/probablistic_model.md)
