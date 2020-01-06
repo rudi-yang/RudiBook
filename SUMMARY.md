@@ -23,6 +23,7 @@
     
         * [信息论-熵](./stat/math/entropy.md)
         * [矩阵](./stat/math/matrix.md)
+        * [概率分布](./stat/math/distribution.md)
         
     * [回归分析](./stat/regression.md)
     * [HMM](./stat/hmm.md)
@@ -33,6 +34,9 @@
     * [数据库连接](./project/database.md)
     
 * [数据集](./dataset/index.md)
-    
 
+* [Money](./finance/index.md)
+
+    * [K线](./finance/k.md)
+    
 * [Gitbook启动方法](./gitbook_server/index.md)
