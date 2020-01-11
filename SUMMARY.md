@@ -38,5 +38,6 @@
 * [Money](./finance/index.md)
 
     * [K线](./finance/k.md)
+    * [区块链](./finance/block_chain.md)
     
 * [Gitbook启动方法](./gitbook_server/index.md)
