@@ -1,0 +1,534 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HMM · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="probablistic_model.html" />
+    
+    
+    <link rel="prev" href="regression.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/command.html">
+            
+                <a href="../linux/command.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../data_process/">
+            
+                <a href="../data_process/">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../data_process/skills/tips.html">
+            
+                <a href="../data_process/skills/tips.html">
+            
+                    
+                    常用技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../data_process/">
+            
+                <a href="../data_process/">
+            
+                    
+                    sklearn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../data_process/pipeline.md">
+            
+                <span>
+            
+                    
+                    pipeline数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../data_process/feature_selection.md">
+            
+                <span>
+            
+                    
+                    特征筛选
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../data_process/model_selection.md">
+            
+                <span>
+            
+                    
+                    模型筛选
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../data_process/R.md">
+            
+                <span>
+            
+                    
+                    R
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    统计方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="entropy.html">
+            
+                <a href="entropy.html">
+            
+                    
+                    熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="regression.html">
+            
+                <a href="regression.html">
+            
+                    
+                    回归分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="hmm.html">
+            
+                <a href="hmm.html">
+            
+                    
+                    HMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="probablistic_model.html">
+            
+                <a href="probablistic_model.html">
+            
+                    
+                    概率图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../project/database.html">
+            
+                <a href="../project/database.html">
+            
+                    
+                    数据库连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../gitbook_server/">
+            
+                <a href="../gitbook_server/">
+            
+                    
+                    Gitbook启动方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HMM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="hmm">HMM</h1>
+<h2 id="hmm-&#x6784;&#x6210;">HMM &#x6784;&#x6210;</h2>
+<ul>
+<li>&#x4E09;&#x8981;&#x7D20;<ol>
+<li>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x77E9;&#x9635; A</li>
+<li>&#x89C2;&#x6D4B;&#x6982;&#x7387;&#x77E9;&#x9635;&#xFF08;&#x53D1;&#x5C04;&#x6982;&#x7387;&#xFF09;B</li>
+<li>&#x521D;&#x59CB;&#x72B6;&#x6001;&#x6982;&#x7387;&#x5411;&#x91CF; Pi</li>
+</ol>
+</li>
+<li>&#x4E94;&#x5143;&#x7EC4;<ol>
+<li>&#x72B6;&#x6001;&#x96C6;&#x5408; Q</li>
+<li>&#x89C2;&#x6D4B;&#x5E8F;&#x5217; V</li>
+</ol>
+</li>
+</ul>
+<h2 id="hmm-&#x57FA;&#x672C;&#x95EE;&#x9898;">HMM &#x57FA;&#x672C;&#x95EE;&#x9898;</h2>
+<ol>
+<li>&#x6982;&#x7387;&#x8BA1;&#x7B97;&#x95EE;&#x9898;&#xFF08;&#x8BC4;&#x4F30;&#x95EE;&#x9898;&#xFF09;- &#x524D;&#x5411;&#x7B97;&#x6CD5;<ul>
+<li>&#x7ED9;&#x5B9A;&#x6A21;&#x578B;Lambda(A,B,Pi)&#x548C;&#x67D0;&#x4E2A;&#x89C2;&#x6D4B;&#x5E8F;&#x5217;O&#xFF0C;&#x6C42;&#x89E3;O&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;</li>
+</ul>
+</li>
+<li>&#x5B66;&#x4E60;&#x95EE;&#x9898;<ul>
+<li>&#x7ED9;&#x5B9A;&#x5E8F;&#x5217;O&#xFF0C;&#x4F30;&#x8BA1;&#x6A21;&#x578B;&#x53C2;&#x6570;A&#xFF0C;B&#xFF0C;Pi&#xFF0C;&#x4F7F;&#x5F97;&#x6539;&#x89C2;&#x6D4B;&#x5E8F;&#x5217;O&#x51FA;&#x73B0;&#x6982;&#x7387;&#x6700;&#x5927;&#x3002;&#x91C7;&#x7528;&#x6781;&#x5927;&#x4F3C;&#x7136;&#x6C42;&#x89E3;</li>
+</ul>
+</li>
+<li>&#x9884;&#x6D4B;&#x95EE;&#x9898;&#xFF08;&#x89E3;&#x7801;&#x95EE;&#x9898;&#xFF09;- &#x7EF4;&#x7279;&#x6BD4;&#x7B97;&#x6CD5;<ul>
+<li>&#x5DF2;&#x77E5;&#x6A21;&#x578B;&#x548C;&#x89C2;&#x6D4B;&#x5E8F;&#x5217;O&#xFF0C;&#x6C42;&#x89E3;&#x51FA;&#x73B0;O&#x7684;&#x6982;&#x7387;&#x6700;&#x5927;&#x7684;&#x72B6;&#x6001;&#x5E8F;&#x5217;</li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x6C42;&#x89E3;&#x65B9;&#x6CD5;&#xFF08;hmmlearn&#xFF09;">&#x6C42;&#x89E3;&#x65B9;&#x6CD5;&#xFF08;HmmLearn&#xFF09;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="regression.html" class="navigation navigation-prev " aria-label="Previous page: 回归分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="probablistic_model.html" class="navigation navigation-next " aria-label="Next page: 概率图">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HMM","level":"1.4.3","depth":2,"next":{"title":"概率图","level":"1.4.4","depth":2,"path":"stat/probablistic_model.md","ref":"./stat/probablistic_model.md","articles":[]},"previous":{"title":"回归分析","level":"1.4.2","depth":2,"path":"stat/regression.md","ref":"./stat/regression.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","mathjax"],"pluginsConfig":{"chapter-fold":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"stat/hmm.md","mtime":"2019-12-30T17:26:17.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-01T17:52:04.183Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

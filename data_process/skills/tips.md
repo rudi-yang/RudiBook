@@ -37,6 +37,10 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 
+# numpy
+np.set_printoptions(threshold = 1e3, linewidth=1000)
+
+
 # 显示行列设置
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
