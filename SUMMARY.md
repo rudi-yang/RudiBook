@@ -37,6 +37,7 @@
 
 * [Money](./finance/index.md)
 
+    * [通用基础](./finance/general.md)
     * [K线](./finance/k.md)
     * [区块链](./finance/block_chain.md)
     
